@@ -1,0 +1,981 @@
+@charset "UTF-8";
+/* インターネット上からフォントを読み込み */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+/* ダウンロードしたフォントの読み込み*/
+@font-face {
+    font-family: "VeraMono";
+    src: url("../font/VeraMono.ttf"); 
+}
+
+
+/*　
+    共通レイアウトの初期化・設定
+*/
+html {
+    font-size: 100%;
+  }
+body {
+    color: #333333;
+    letter-spacing: 0.05em;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: 'Pacifico';
+}
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 65px;
+}
+h3 {
+    font-size: 16px;
+    line-height: 1.5rem;
+}
+
+
+/* メインのコンテンツ幅の設定(layout-containerクラス) */
+.l-container {
+    margin: 0 4%;
+    padding-top: 8px;
+    padding-bottom: 80px;
+}
+
+
+/*　
+    ヘッダー
+*/
+header {
+    max-width: 100%;
+    background-color: white; 
+    display: flex;
+    justify-content: space-between;
+    /* ヘッダー内コンテンツを縦方向に中央揃え */
+    align-items: center; 
+
+    height: 80px;
+    padding: 0 4%;
+
+    /*　ヘッダーを画面上部に固定 */
+    position: sticky;
+    top: 0;
+
+    /* ヘッダー部分が最上部にくるように設定 */
+    z-index: 100
+
+}
+
+header img {
+    width: auto;
+    height: 30px;
+
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+header ul {
+    display: flex; /* メニュー横並び　*/
+    gap: 28px; 
+    font-size: 1.25rem; /* グローバルメニューの文字サイズに20pxを指定 */
+}
+
+header a{
+    font-weight: 600;
+}
+
+header a:hover{
+    transform: scale(2);
+    opacity: 0.5;
+}
+
+/*　
+    メインビジュアル
+*/
+#mv {
+    max-width: 100%;
+    height: 550px;
+    background-color: #F5F5F5;
+    background-image: url(../img/mv/mainVisual.png); /* backgroud-image属性で画像を挿入 */
+    background-size: cover;
+
+    position: relative; 
+}
+
+.intro-letter {
+    /*　要素を絶対位置で中央揃え　*/
+    position: absolute; 
+    top:50%;
+    transform: translateY(-50%);
+
+    width: 80%;
+}
+
+.intro-letter::before {
+    content: url(../img/mv/clip.png);
+    display: block;
+    transform: scale(0.2);
+
+    position: absolute;
+    top: -75%;
+
+    z-index: -1;
+
+}
+
+.intro-letter p {
+    margin-top: 20px;
+    line-height: 1.5rem;
+}
+
+
+/*　
+    クレド
+*/
+#credo {
+    background-color: #ffffff;
+    max-width: 100%; 
+}
+
+#credo-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 4rem;
+}
+
+#credo-title p {
+    margin-top: -80px;
+    margin-bottom: 60px;
+    width: 48%;
+}
+
+#credo-visual {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#credo-description {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; 
+    margin-top: 100px;
+}
+
+#credo-description p {
+     /* クレドの詳細説明文には12pxを指定 */ 
+    text-align: left;
+    line-height: 1.25rem;
+    
+}
+
+
+/*　
+    スキル
+*/
+#skills {
+    background-color: #F5F5F5;
+    max-width: 100%; 
+}
+
+.skills-charts {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 360px; */
+}
+
+
+.speciality-skills {
+    width: 45%;
+}
+
+.speciality-tag {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 10px 24px;
+    border: solid 1px #333333;
+    border-radius: 20px;
+
+    font-size: 0.75rem;
+    font-weight: 1000;
+
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+
+.speciality-softs {
+    display: flex;
+    gap: 16px;
+}
+
+.soft {
+    text-align: center;
+    margin-bottom: 40px;
+
+    flex-shrink: 0;
+}
+
+.soft img {
+    /* max-width: 100%; */
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+
+    flex-shrink: 0;
+}
+
+.soft p {
+    color: #8F8F8F;
+
+    margin-top: 8px;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+
+.speciality-description {
+    line-height: 1.5rem;
+}
+
+
+
+
+/*　
+    作品
+*/
+#works {
+    background-color: #ffffff;
+    max-width: 100%; 
+    
+}
+
+
+.works-slider {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4%;
+}
+
+.work {
+    margin: 0 auto;
+    text-align: center;
+
+    width: 20%;
+}
+
+#work-number1 {
+    font-family: "VeraMono";
+    font-size: 2rem;
+    color: #8B4FB5;
+}
+
+#work-number2 {
+    font-family: "VeraMono";
+    font-size: 2rem;
+    color: #7B422A;
+    
+}
+
+#work-number3 {
+    font-family: "VeraMono";
+    font-size: 2rem;
+    color: #006400;
+}
+
+#work-number4 {
+    font-family: "VeraMono";
+    font-size: 2rem;
+    color: #CA4D78;
+}
+
+.work-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+
+
+#work1-title {
+    color: #8B4FB5;
+    width: 100%;
+    position: relative;
+
+    z-index: 10;
+}
+
+#work1-title span {
+    background-color: #ffffff;
+    padding: 2% 4%;
+}
+
+#work1-title::before,
+#work1-title::after {
+     content: '';
+     height: 4px; 
+     width: 20px;
+     display: inline-block;
+     background-color: #8B4FB5;
+
+     border-radius: 100px;
+
+     position: absolute;
+     top: 50%;
+     left: 15%;
+     transform: translateY(-50%) translateX(-50%); 
+
+     z-index: -1;
+}
+
+#work1-title::before {
+    margin-right: 20%;
+}
+
+#work1-title::after {
+    margin-left: 70%; 
+} 
+
+#work2-title {
+    color: #7B422A;
+    width: 100%;
+    position: relative;
+
+    z-index: 10;
+}
+
+#work2-title span {
+    background-color: #ffffff;
+    padding: 2% 4%;
+}
+
+#work2-title::before,
+#work2-title::after {
+     content: '';
+     height: 4px; 
+     width: 20px;
+     display: inline-block;
+     background-color: #7B422A;
+
+     border-radius: 100px;
+
+     position: absolute;
+     top: 50%;
+     left: 15%;
+     transform: translateY(-50%) translateX(-50%); 
+
+     z-index: -1;
+}
+
+#work2-title::before {
+    margin-right: 20%;
+}
+
+#work2-title::after {
+    margin-left: 70%; 
+} 
+
+#work3-title {
+    color: #006400;
+    width: 100%;
+    position: relative;
+
+    z-index: 10;
+}
+
+#work3-title span {
+    background-color: #ffffff;
+    padding: 2% 4%;
+}
+
+#work3-title::before,
+#work3-title::after {
+     content: '';
+     height: 4px; 
+     width: 20px;
+     display: inline-block;
+     background-color: #006400;
+
+     border-radius: 100px;
+
+     position: absolute;
+     top: 50%;
+     left: 5%;
+     transform: translateY(-50%) translateX(-50%); 
+
+     z-index: -1;
+}
+
+#work3-title::before {
+    margin-right: 50%;
+}
+
+#work3-title::after {
+    margin-left: 90%; 
+} 
+
+#work4-title {
+    color: #CA4D78;
+    width: 100%;
+    position: relative;
+
+    z-index: 10;
+}
+
+#work4-title span {
+    background-color: #ffffff;
+    padding: 2% 4%;
+}
+
+
+#work4-title::before,
+#work4-title::after {
+     content: '';
+     height: 4px; 
+     width: 20px;
+     display: inline-block;
+     background-color: #CA4D78;
+
+     border-radius: 100px;
+
+     position: absolute;
+     top: 50%;
+     left: 5%;
+     transform: translateY(-50%) translateX(-50%); 
+
+     z-index: -1;
+}
+
+#work4-title::before {
+    margin-right: 50%;
+}
+
+#work4-title::after {
+    margin-left: 90%; 
+} 
+
+.work-description {
+    line-height: 1.5rem;
+    padding: 2%;
+}
+
+
+/*　
+    経験
+*/
+#experiences {
+    background-color: #F5F5F5;
+    max-width: 100%; 
+}
+
+.speciality-experiences-container {
+    display: flex;
+    gap: 200px;
+    /* justify-content: space-between; */
+}
+
+.speciality-experiences table {
+    border-collapse: separate;
+    border-spacing: 12px 16px;
+
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
+.experience-tag {
+    display: inline-block;
+
+    background-color: #ffffff;
+    padding: 10px 24px;
+    margin: 80px 0 12px 0;
+
+    border: solid 1px #333333;
+    border-radius: 20px;
+
+    font-size: 0.75rem;
+    font-weight: 1000;
+}
+
+
+/*　
+    フッター
+*/
+footer {
+    max-width: 100%;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+
+@media screen and (max-width: 576px) {
+
+    /*　
+        ヘッダー
+    */
+    header {
+        max-width: 100%;
+        flex-direction: column;
+        height: auto;
+        padding: 10px 4%;
+    }
+
+    header nav {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    header a {
+        font-size: 10px;
+    }
+
+
+    /*　
+        メインビジュアル
+    */
+    #mv {
+        max-width: 100%;
+        height: 450px;
+        background-color: #F5F5F5;
+        background-image: url(../img/mv/mainVisual.png); /* backgroud-image属性で画像を挿入 */
+        background-size: cover;
+        margin: 0 auto;
+    }
+    
+    .intro-letter {
+        /*　要素を絶対位置で中央揃え　*/
+        position: absolute; 
+        top:50%;
+        transform: translateY(-50%);
+    
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .intro-letter::before {
+        content: url(../img/mv/clip.png);
+        display: block;
+        transform: scale(0.2);
+    
+        position: absolute;
+        top: -92%;
+        left: -15%;
+    
+        z-index: -1;
+    
+    }
+    
+    .intro-letter p {
+        margin-top: 20px;
+        line-height: 1.5rem;
+    }
+
+
+    /*　
+        クレド
+    */
+    #credo {
+        background-color: #ffffff;
+        max-width: 100%; 
+    }
+
+    #credo-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 2rem;
+    }
+
+    #credo-title p {
+        margin-top: -40px;
+        margin-bottom: 40px;
+        width: 96%;
+    }
+
+    #credo-visual {
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #credo-description {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto; 
+        margin-top: 50px;
+    }
+
+    #credo-description p {
+        text-align: left;
+        line-height: 1.25rem;
+        
+    }
+
+    /*　
+        スキル
+    */
+    #skills {
+        background-color: #F5F5F5;
+        max-width: 100%; 
+    }
+
+    .skills-charts {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        align-items: center;
+        gap: 80px;
+    }
+
+
+    .speciality-skills {
+        width: 80%;
+        text-align: center;
+    }
+
+    .speciality-tag {
+        display: inline-block;
+        background-color: #ffffff;
+        padding: 10px 24px;
+        border: solid 1px #333333;
+        border-radius: 20px;
+
+        font-size: 0.75rem;
+        font-weight: 1000;
+
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+
+    .speciality-softs {
+        display: flex;
+        /* gap: 16px; */
+        justify-content: center;
+
+    }
+
+    .soft {
+        text-align: center;
+        margin-bottom: 40px;
+
+        flex-shrink: 0;
+    }
+
+    .soft img {
+        /* max-width: 100%; */
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+
+        flex-shrink: 0;
+    }
+
+    .soft p {
+
+        color: #8F8F8F;
+
+        margin-top: 8px;
+        font-size: 0.75rem;
+        font-weight: 400;
+
+        text-align: center;
+    }
+
+
+    .speciality-description {
+        line-height: 1.5rem;
+    }
+
+
+    /*　
+        作品
+    */
+    #works {
+        background-color: #ffffff;
+        max-width: 100%; 
+    }
+
+
+    .works-slider {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 40px;
+
+        gap: 80px;
+    }
+
+    .work {
+        margin: 0 auto;
+        text-align: center;
+
+        width: 80%;
+    }
+
+    #work-number1 {
+        font-family: "VeraMono";
+        font-size: 2rem;
+        color: #8B4FB5;
+    }
+
+    #work-number2 {
+        font-family: "VeraMono";
+        font-size: 2rem;
+        color: #7B422A;
+        
+    }
+
+    #work-number3 {
+        font-family: "VeraMono";
+        font-size: 2rem;
+        color: #006400;
+    }
+
+    #work-number4 {
+        font-family: "VeraMono";
+        font-size: 2rem;
+        color: #CA4D78;
+    }
+
+    .work-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+
+
+    #work1-title {
+        color: #8B4FB5;
+        width: 100%;
+        position: relative;
+
+        z-index: 10;
+    }
+
+    #work1-title span {
+        background-color: #ffffff;
+        padding: 2% 4%;
+    }
+
+    #work1-title::before,
+    #work1-title::after {
+        content: '';
+        height: 4px; 
+        width: 20px;
+        display: inline-block;
+        background-color: #8B4FB5;
+
+        border-radius: 100px;
+
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        transform: translateY(-50%) translateX(-50%); 
+
+        z-index: -1;
+    }
+
+    #work1-title::before {
+        margin-right: 20%;
+    }
+
+    #work1-title::after {
+        margin-left: 70%; 
+    } 
+
+    #work2-title {
+        color: #7B422A;
+        width: 100%;
+        position: relative;
+
+        z-index: 10;
+    }
+
+    #work2-title span {
+        background-color: #ffffff;
+        padding: 2% 4%;
+    }
+
+    #work2-title::before,
+    #work2-title::after {
+        content: '';
+        height: 4px; 
+        width: 20px;
+        display: inline-block;
+        background-color: #7B422A;
+
+        border-radius: 100px;
+
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        transform: translateY(-50%) translateX(-50%); 
+
+        z-index: -1;
+    }
+
+    #work2-title::before {
+        margin-right: 20%;
+    }
+
+    #work2-title::after {
+        margin-left: 70%; 
+    } 
+
+    #work3-title {
+        color: #006400;
+        width: 100%;
+        position: relative;
+
+        z-index: 10;
+    }
+
+    #work3-title span {
+        background-color: #ffffff;
+        padding: 2% 4%;
+    }
+
+    #work3-title::before,
+    #work3-title::after {
+        content: '';
+        height: 4px; 
+        width: 20px;
+        display: inline-block;
+        background-color: #006400;
+
+        border-radius: 100px;
+
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%) translateX(-50%); 
+
+        z-index: -1;
+    }
+
+    #work3-title::before {
+        margin-right: 50%;
+    }
+
+    #work3-title::after {
+        margin-left: 90%; 
+    } 
+
+    #work4-title {
+        color: #CA4D78;
+        width: 100%;
+        position: relative;
+
+        z-index: 10;
+    }
+
+    #work4-title span {
+        background-color: #ffffff;
+        padding: 2% 4%;
+    }
+
+
+    #work4-title::before,
+    #work4-title::after {
+        content: '';
+        height: 4px; 
+        width: 20px;
+        display: inline-block;
+        background-color: #CA4D78;
+
+        border-radius: 100px;
+
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%) translateX(-50%); 
+
+        z-index: -1;
+    }
+
+    #work4-title::before {
+        margin-right: 50%;
+    }
+
+    #work4-title::after {
+        margin-left: 90%; 
+    } 
+
+    .work-description {
+        line-height: 1.5rem;
+        padding: 2%;
+    }
+
+
+    /*　
+        経験
+    */
+    #experiences {
+        background-color: #F5F5F5;
+        max-width: 100%; 
+    }
+
+    #experiences img {
+        width: 200%;
+        height: auto;
+    }
+
+    .speciality-experiences-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .speciality-experiences table {
+        border-collapse: separate;
+        border-spacing: 12px 16px;
+
+        font-size: 0.75rem;
+    }
+
+    .experience-tag {
+        display: inline-block;
+
+        background-color: #ffffff;
+        padding: 10px 24px;
+        margin: 40px 0 12px 0;
+
+        border: solid 1px #333333;
+        border-radius: 20px;
+
+        font-size: 0.75rem;
+        font-weight: 1000;
+    }
+
+
+    /*　
+        フッター
+    */
+    footer {
+        max-width: 100%;
+        background-color: #333333;
+        color: white;
+        text-align: center;
+        padding: 10px 20px;
+
+        font-size: 0.5rem;
+    }
+
+ 
+
+
+}
