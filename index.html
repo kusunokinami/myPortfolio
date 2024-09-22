@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>ポートフォリオサイト</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div>
+            <a href="/">
+                <img src="img/header/siteLogo.png" alt="">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#credo">CREDO</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#experiences">EXPERIENCES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main> 
+        <!-- メインビジュアル -->
+        <section id="mv">
+            <div class="l-container">
+                <div class="intro-letter">
+                    <img src="img/mv/intro.png" alt="">
+                    <p>
+                        こんにちは。木南俊樹です!<br>
+                        現在、大学院でデザインとエンジニアリングを学んでいます。
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- クレド(ポリシー) -->
+        <section id="credo">
+            <div class="l-container">
+                <div id="credo-title">
+                    <img src="img/title/CREDO.png" alt="">
+                    <p>
+                        多様な視点からものごとを捉え、新たな発見から問題解決
+                    </p>
+                </div>
+                <div id="credo-visual">
+                    <img src="img/credo/visANDsupple.png" alt="" loading="lazy">
+                </div>
+                <div id="credo-description">
+                    <p>
+                        １つの視点からではなく、様々な視点からものごとを捉えていくことで今まで気づけなかった発見できると私は考えています。時には逆の視点・違う視点から見て、弱みを強みに変えていきたいです。
+                        また、デザインに近接する知識に加えて趣味や独学で行っている「アプリ開発」、共同研究で取り組んでいる「医療の専門分野」の知識を組み合わせて、デザインに取り組んでいます。
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- スキル -->
+        <section id="skills">
+            <div class="l-container">
+                <img src="img/title/SKILLS.png" alt="">
+                    <div class="skills-charts">
+                        <div class="speciality-skills">
+                            <span class="speciality-tag">デザインスキル</span>
+                            <div class="speciality-softs">
+                                <div class="soft">
+                                    <img src="img/skills/aiIcon.png" alt="">
+                                    <p>Illustrator</p>
+                                </div>
+                                <div class="soft">
+                                    <img src="img/skills/figmaIcon.png" alt="">
+                                    <p>Figma</p>
+                                </div>
+                                <div class="soft">
+                                    <img src="img/skills/aeIcon.png" alt="">
+                                    <p>AfterEffects</p>
+                                </div>
+                            </div>
+                            <p class="speciality-description">デザインソフトは主にFigmaを使用しています。授業での動画作成や動画での説明のためにAfrerEffectsで作成する機会があります。</p>
+                        </div>
+                        <div class="speciality-skills">
+                            <span class="speciality-tag">プログラミングスキル</span>
+                            <div class="speciality-softs">
+                                <div class="soft">
+                                    <img src="img/skills/SwiftLogo.png" alt="" loading="lazy">
+                                    <p>Swift</p>
+                                </div>
+                                <div class="soft">
+                                    <img src="img/skills/tsLogo.png" alt="" loading="lazy">
+                                    <p>TypeScript</p>
+                                </div>
+                                <div class="soft">
+                                    <img src="img/skills/phpLogo.png" alt="" loading="lazy">
+                                    <p>PHP</p>
+                                </div>
+                            </div> 
+                            <p class="speciality-description">デザインしたものをアプリとしてリリースしたいと考え、Swift/SwiftUIを勉強中です。また、ハッカソンでNext.jsを触ったことをきっかけにTypeScriptの勉強を最近始めました。バックエンド・サーバーサイド言語はPHPをメインで使用しています。</p>
+                        </div>  
+                    </div>
+                </div>
+        </section>
+        <!-- 作品 -->
+        <section id="works">
+            <div class="l-container">
+                <img src="img/title/WORKS.png" alt="">
+                <div class="works-slider">
+                    <div class="work" id="work-item1">
+                        <p id="work-number1">01</p>
+                        <img src="img/works/work-item1.png" alt="" loading="lazy">
+                        <div class="title">
+                            <p class="work-title" id="work1-title"><span>卒業研究</span></p>
+                        </div>                        
+                        <p class="work-description">倫理を考えないといけない状況のデザインを体験学習できるワークショップ</p>
+                    </div>
+                    <div class="work" id="work-item2">
+                        <p id="work-number2">02</p>
+                        <img src="img/works/work-item2.png" alt="" loading="lazy">
+                        <p class="work-title" id="work2-title"><span>ReKet</span></p>
+                        <p class="work-description">様々なデータ活用とリメイクを組み合わせ、古着を合理的に売買できるフリマアプリ</p>
+                    </div>
+                    <div class="work" id="work-item3">
+                        <p id="work-number3">03</p>
+                        <img src="img/works/work-item3.png" alt="" loading="lazy">
+                        <p class="work-title" id="work3-title"><span>ポケット防災</span></p>
+                        <p class="work-description">オリジナルのハザードマップを作成・共有できる地図アプリ</p>
+                    </div>
+                    <div class="work" id="work-item4">
+                        <p id="work-number4">04</p>
+                        <img src="img/works/work-item4.png" alt="" loading="lazy">
+                        <p class="work-title" id="work4-title"><span>OTHER1</span></p>
+                        <p class="work-description">女性向け恋活・婚活アプリのバナー作成など</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 経験 -->
+        <section id="experiences">
+            <div class="l-container">
+                <img src="img/title/EXPERIENCES.png" alt="">
+                <div class="speciality-experiences-container">
+                    <div class="speciality-experiences">
+                        <span class="experience-tag">自分年表</span>
+                        <table>
+                            <tr>
+                                <td>2001.03</td>
+                                <td>埼玉県で誕生</td>
+                            </tr>
+                            <tr>
+                                <td>2019.03</td>
+                                <td>埼玉県立松山高等学校を卒業</td>
+                            </tr>
+                            <tr>
+                                <td>2019.04</td>
+                                <td>芝浦工業大学 デザイン工学科 生産・プロダクト系へ入学</td>
+                            </tr>
+                            <tr>
+                                <td>2020.04</td>
+                                <td>2年次から生産・プロダクト系→ロボティクス・情報デザイン系へ系変更</td>
+                            </tr>
+                            <tr>
+                                <td>2023.03</td>
+                                <td>芝浦工業大学 デザイン工学科ロボティクス・情報デザイン系卒業</td>
+                            </tr>
+                            <tr>
+                                <td>2023.04</td>
+                                <td>芝浦工業大学大学院 理工学研究科 電気電子情報工学専攻入学</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="speciality-experiences">
+                        <span class="experience-tag">インターン</span>
+                        <table>
+                            <tr>
+                                <td>2023.10</td>
+                                <td>RIZAPグループ株式会社【3日間】</td>
+                            </tr>
+                            <tr>
+                                <td>2024.08</td>
+                                <td>LINEヤフー株式会社【5日間】</td>
+                            </tr>
+                            <tr>
+                                <td>2024.08</td>
+                                <td>GA technologies株式会社【2日間】</td>
+                            </tr>
+                            <tr>
+                                <td>2024.08</td>
+                                <td>株式会社エイチーム【２日間】</td>
+                            </tr>
+                            <tr>
+                                <td>2024.09</td>
+                                <td>株式会社Sun*【３日間】</td>
+                            </tr>
+                            <tr>
+                                <td>2024.10</td>
+                                <td>株式会社SUPER STUDIO【長期インターン(予定)】</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 2024 Toshiki's Portfolio</p>
+    </footer>
+</body>
+</html>
