@@ -4,7 +4,7 @@
 /* ダウンロードしたフォントの読み込み*/
 @font-face {
     font-family: "VeraMono";
-    src: url("../font/VeraMono.ttf"); 
+    src: url("VeraMono.ttf"); 
 }
 
 
@@ -30,20 +30,6 @@ img {
 
 li {
     list-style: none;
-}
-
-h1 {
-    font-size: 60px;
-    font-family: 'Pacifico';
-}
-h2 {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 65px;
-}
-h3 {
-    font-size: 16px;
-    line-height: 1.5rem;
 }
 
 
@@ -108,7 +94,7 @@ header a:hover{
     max-width: 100%;
     height: 550px;
     background-color: #F5F5F5;
-    background-image: url(../img/mv/mainVisual.png); /* backgroud-image属性で画像を挿入 */
+    background-image: url(mainVisual.png); /* backgroud-image属性で画像を挿入 */
     background-size: cover;
 
     position: relative; 
@@ -124,7 +110,7 @@ header a:hover{
 }
 
 .intro-letter::before {
-    content: url(../img/mv/clip.png);
+    content: url(clip.png);
     display: block;
     transform: scale(0.2);
 
@@ -550,7 +536,7 @@ footer {
         max-width: 100%;
         height: 450px;
         background-color: #F5F5F5;
-        background-image: url(../img/mv/mainVisual.png); /* backgroud-image属性で画像を挿入 */
+        background-image: url(mainVisual.png); /* backgroud-image属性で画像を挿入 */
         background-size: cover;
         margin: 0 auto;
     }
@@ -566,7 +552,7 @@ footer {
     }
     
     .intro-letter::before {
-        content: url(../img/mv/clip.png);
+        content: url(clip.png);
         display: block;
         transform: scale(0.2);
     
@@ -675,7 +661,6 @@ footer {
     }
 
     .soft img {
-        /* max-width: 100%; */
         width: 50px;
         height: 50px;
         object-fit: cover;
@@ -684,9 +669,7 @@ footer {
     }
 
     .soft p {
-
         color: #8F8F8F;
-
         margin-top: 8px;
         font-size: 0.75rem;
         font-weight: 400;
